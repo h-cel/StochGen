@@ -1,0 +1,16 @@
+function RULES = getRules()
+% RULES : Specify which statistics to use in the objective function.
+% rows correspond to mean, variance, covariance, ZDP and 3rd order moment. 
+% Columns correspond to the aggregate levels 1/6, 1/2, 1, 6, 12, 24, 48, 72 and monthly values(only for mean and variance)
+% (in hours)
+% Any property with value larger than 0 will be included in the objective
+% function. The number attributed to the property will also serve as a
+% weight in that certain term in the objective function. 
+
+RULES=[ 0,0,0,0,0,1,1,1,0;...
+        0,0,0,0,0,1,1,1,0; ...
+        0,0,0,0,0,1,1,1,0; ... 
+        0,0,0,0,0,1,1,1,0; ... 
+        0,0,0,0,0,1,1,1,0]; ...
+        
+end
